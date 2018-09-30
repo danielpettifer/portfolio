@@ -1,0 +1,34 @@
+.Header {
+    display: block;
+    width: 60px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    background: #fff;
+}
+
+.BrandContainer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 9999;
+    width: 50px;
+    height: 120px;
+}
+
+.Brand {
+    position: absolute;
+    right: -108px;
+    bottom: 156px;
+    width: 260px;
+    transform: rotate(-90deg);
+    font-weight: 600;
+    color: #000;
+    font-size: 14px;
+}
+
+.BrandDetail {
+    color: #8793ac;
+}

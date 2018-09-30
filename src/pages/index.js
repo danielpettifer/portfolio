@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Header from '../components/header';
+import Header from '../components/header/header';
 import Menu from '../components/menu/menu';
 
 const IndexPage = () => (
