@@ -4,11 +4,11 @@ import styles from './menu.css'
 
 const Menu = ({ siteTitle }) => (
   <div>
-    <div className="MenuButton">
+    <a className="MenuButton toggle" id="test" href="#example">
       <div className="MenuBarTop"></div>
       <div className="MenuBarBottom"></div>
-    </div> 
-    <div className="Menu">
+    </a> 
+    <div className="Menu toggle-content" id="example">
       <div className="MenuGroup">
         <div className="MenuGroupSection">
           <h2 className="MenuTitle">UX • UI • Frontend dev</h2>
@@ -36,5 +36,44 @@ const Menu = ({ siteTitle }) => (
     </div>
   </div>
 )
+
+var show = function (elem) {
+	elem.style.display = 'block';
+};
+
+var hide = function (elem) {
+	elem.style.display = 'none';
+};
+
+var toggle = function (elem) {
+
+	// If the element is visible, hide it
+	if (window.getComputedStyle(elem).display === 'block') {
+		hide(elem);
+		return;
+	}
+
+	// Otherwise, show it
+	show(elem);
+
+};
+
+// Listen for click events
+document.addEventListener('click', function (event) {
+
+	// Make sure clicked element is our toggle
+	if (!event.target.classList.contains('toggle')) return;
+
+	// Prevent default link behavior
+	event.preventDefault();
+
+	// Get the content
+	var content = document.querySelector(event.target.hash);
+	if (!content) return;
+
+	// Toggle the content
+	toggle(content);
+
+}, false);
 
 export default Menu
