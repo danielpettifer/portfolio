@@ -5,8 +5,8 @@ import styles from './menu.css'
 const Menu = ({ siteTitle }) => (
   <div>
     <a className="MenuButton toggle" id="test" href="#example">
-      <div className="MenuBarTop"></div>
-      <div className="MenuBarBottom"></div>
+      <div className="MenuBarTop" id="MenuBarTop"></div>
+      <div className="MenuBarBottom" id="MenuBarBottom"></div>
     </a> 
     <div className="Menu toggle-content" id="example">
       <div className="MenuGroup">
@@ -37,12 +37,21 @@ const Menu = ({ siteTitle }) => (
   </div>
 )
 
+
 var show = function (elem) {
-	elem.style.left = '0px';
+  elem.style.left = '0px';
+  document.getElementById('MenuBarTop').style.transform = 'rotate(45deg)';
+  document.getElementById('MenuBarTop').style.top = '4px';
+  document.getElementById('MenuBarBottom').style.transform = 'rotate(-45deg)';
+  document.getElementById('MenuBarBottom').style.bottom = '6px';
 };
 
 var hide = function (elem) {
-	elem.style.left = '-80vw';
+  elem.style.left = '-80vw';
+  document.getElementById('MenuBarTop').style.transform = 'rotate(0deg)';
+  document.getElementById('MenuBarTop').style.top = '0';
+  document.getElementById('MenuBarBottom').style.transform = 'rotate(0deg)';
+  document.getElementById('MenuBarBottom').style.bottom = '0';
 };
 
 var toggle = function (elem) {
@@ -50,7 +59,7 @@ var toggle = function (elem) {
 	// If the element is visible, hide it
 	if (window.getComputedStyle(elem).left === '0px') {
 		hide(elem);
-		return;
+    return;
 	}
 
 	// Otherwise, show it

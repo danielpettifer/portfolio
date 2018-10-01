@@ -7,8 +7,8 @@
     height: 100vh;
     display: flex;
     padding: 210px 0 0 165px;
-    /* transform: translateX(-80vw); */
-    /* display: none; */
+    transition: left 0.3s;
+    transition-timing-function: ease-in-out;
 }
 
 .MenuButton {
@@ -24,7 +24,7 @@
 }
 
 .MenuButton:hover {
-    background: #7c858d;
+    /* background: #7c858d; */
 }
 
 .MenuBarTop {
@@ -40,6 +40,7 @@
     margin-left: auto;
     border-radius: 5px;
     background-color: #000;
+    transition: all .3s ease-in-out;
 }
 
 .MenuBarBottom {
@@ -55,6 +56,7 @@
     margin-left: auto;
     border-radius: 5px;
     background-color: #000;
+    transition: all .3s ease-in-out;
 }
 
 h2 {
