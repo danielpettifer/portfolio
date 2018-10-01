@@ -1,13 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styles from './menu.css'
+import styles from './Menu.css'
 
 const Menu = ({ siteTitle }) => (
   <div>
-    <a className="MenuButton toggle" id="test" href="#example">
+    <div className="MenuButton">
+      <div className="MenuCircle" id="MenuCircle"></div>
       <div className="MenuBarTop" id="MenuBarTop"></div>
       <div className="MenuBarBottom" id="MenuBarBottom"></div>
-    </a> 
+      <a className="toggle" id="test" href="#example"></a>
+    </div> 
     <div className="Menu toggle-content" id="example">
       <div className="MenuGroup">
         <div className="MenuGroupSection">
@@ -42,8 +44,12 @@ var show = function (elem) {
   elem.style.left = '0px';
   document.getElementById('MenuBarTop').style.transform = 'rotate(45deg)';
   document.getElementById('MenuBarTop').style.top = '4px';
+  document.getElementById('MenuBarTop').style.backgroundColor = '#0044ff';
+  document.getElementById('MenuBarBottom').style.backgroundColor = '#0044ff';
   document.getElementById('MenuBarBottom').style.transform = 'rotate(-45deg)';
   document.getElementById('MenuBarBottom').style.bottom = '6px';
+  document.getElementById('MenuCircle').style.transform = 'scale(0,0)';
+  document.getElementById('MenuCircle').style.opacity = '0';
   var x = document.getElementsByClassName("DownAndOut");
   var i;
   for (i = 0; i < x.length; i++) {
@@ -54,11 +60,15 @@ var show = function (elem) {
 };
 
 var hide = function (elem) {
-  elem.style.left = '-80vw';
+  elem.style.left = '-100vw';
   document.getElementById('MenuBarTop').style.transform = 'rotate(0deg)';
   document.getElementById('MenuBarTop').style.top = '0';
+  document.getElementById('MenuBarTop').style.backgroundColor = '#fff';
+  document.getElementById('MenuBarBottom').style.backgroundColor = '#fff';
   document.getElementById('MenuBarBottom').style.transform = 'rotate(0deg)';
   document.getElementById('MenuBarBottom').style.bottom = '0';
+  document.getElementById('MenuCircle').style.transform = 'scale(1,1)';
+  document.getElementById('MenuCircle').style.opacity = '1';
   var x = document.getElementsByClassName("DownAndOut");
   var i;
   for (i = 0; i < x.length; i++) {
