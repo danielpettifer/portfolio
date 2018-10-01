@@ -7,8 +7,7 @@
     height: 100vh;
     display: flex;
     padding: 210px 0 0 165px;
-    transition: left 0.3s;
-    transition-timing-function: ease-in-out;
+    transition: all 600ms cubic-bezier(0.17, 0.89, 0.2, 1.05);    
 }
 
 .MenuButton {
