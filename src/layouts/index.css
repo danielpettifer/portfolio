@@ -16,45 +16,23 @@ body {
 }
 
 a {
-  color: #ffa200;
+  color: #0044ff;
   font-weight: 600;
   text-decoration: none;
 }
 
-.Hero {
-  height:920px;
-  /* background: url('../images/wallpaper.jpg'); */
-  background-size: cover;
-  background-position: center;
-}
-
-.HeroGroup {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 150px 50px;
-  text-align: center;
-}
-
-.Hero h1 {
-  margin: 0;
-  color: white;
-  font-size: 60px;
-  line-height: 1.2;
-}
-
-.Hero p {
-  font-size: 30px;
-  line-height: 1.5;
-  color: rgba(255,255,255, 0.8);
-}
-
-.Hero a {
-  font-size: 17px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  background: rgba(0,0,0,0.7);
-  padding: 9px 20px;
-  border: 1px solid rgba(255,255,255, 0.25);
-  border-radius: 20px;
+.Content {
+  position:fixed;
+  top: 0;
+  left: 60px;
+  display: flex;
+  padding: 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #e9ebed;
+  z-index: 0;
+  height: 100vh;
+  overflow-y: scroll;
 }

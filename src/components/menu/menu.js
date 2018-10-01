@@ -11,23 +11,23 @@ const Menu = ({ siteTitle }) => (
     <div className="Menu toggle-content" id="example">
       <div className="MenuGroup">
         <div className="MenuGroupSection">
-          <h2 className="MenuTitle">UX • UI • Frontend dev</h2>
-          <Link to="#" className="MenuLink">
+          <h2 className="MenuTitle DownAndOut ItemOne">UX • UI • Frontend dev</h2>
+          <Link to="#" className="MenuLink DownAndOut ItemTwo">
             <div className="MenuLinkTitle">Applied <span className="MenuLinkDetail">Head of UX</span></div>
             <div className="MenuLinkRollover"></div>
           </Link>
-          <Link to="#" className="MenuLink">
-            <div className="MenuLinkTitle">dpet <span className="MenuLinkDetail">UI</span></div>
+          <Link to="#" className="MenuLink DownAndOut ItemThree">
+            <div className="MenuLinkTitle">DPet <span className="MenuLinkDetail">UX UI React</span></div>
             <div className="MenuLinkRollover"></div>
           </Link>
         </div>
         <div className="MenuGroupSection">
-          <h2 className="MenuTitle">Responsive collaborations</h2>
-          <Link to="#" className="MenuLink">
+          <h2 className="MenuTitle DownAndOut ItemFour">Responsive collaborations</h2>
+          <Link to="#" className="MenuLink DownAndOut ItemFive">
             <div className="MenuLinkTitle">Open Up Challenge</div>
             <div className="MenuLinkRollover"></div>
           </Link>
-          <Link  to="#" className="MenuLink">
+          <Link  to="#" className="MenuLink DownAndOut ItemSix">
             <div className="MenuLinkTitle">Open Contracting Partnership</div>
             <div className="MenuLinkRollover"></div>
           </Link>
@@ -44,6 +44,13 @@ var show = function (elem) {
   document.getElementById('MenuBarTop').style.top = '4px';
   document.getElementById('MenuBarBottom').style.transform = 'rotate(-45deg)';
   document.getElementById('MenuBarBottom').style.bottom = '6px';
+  var x = document.getElementsByClassName("DownAndOut");
+  var i;
+  for (i = 0; i < x.length; i++) {
+      x[i].style.opacity = '1';
+      x[i].style.transform = 'translateY(20px)';
+  }
+
 };
 
 var hide = function (elem) {
@@ -52,6 +59,12 @@ var hide = function (elem) {
   document.getElementById('MenuBarTop').style.top = '0';
   document.getElementById('MenuBarBottom').style.transform = 'rotate(0deg)';
   document.getElementById('MenuBarBottom').style.bottom = '0';
+  var x = document.getElementsByClassName("DownAndOut");
+  var i;
+  for (i = 0; i < x.length; i++) {
+      x[i].style.opacity = '0';
+      x[i].style.transform = 'translateY(-20px)';
+  }
 };
 
 var toggle = function (elem) {
