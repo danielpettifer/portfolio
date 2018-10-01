@@ -12,22 +12,22 @@ const Menu = ({ siteTitle }) => (
       <div className="MenuGroup">
         <div className="MenuGroupSection">
           <h2 className="MenuTitle">UX • UI • Frontend dev</h2>
-          <Link className="MenuLink">
+          <Link to="#" className="MenuLink">
             <div className="MenuLinkTitle">Applied <span className="MenuLinkDetail">Head of UX</span></div>
             <div className="MenuLinkRollover"></div>
           </Link>
-          <Link className="MenuLink">
+          <Link to="#" className="MenuLink">
             <div className="MenuLinkTitle">dpet <span className="MenuLinkDetail">UI</span></div>
             <div className="MenuLinkRollover"></div>
           </Link>
         </div>
         <div className="MenuGroupSection">
           <h2 className="MenuTitle">Responsive collaborations</h2>
-          <Link className="MenuLink">
+          <Link to="#" className="MenuLink">
             <div className="MenuLinkTitle">Open Up Challenge</div>
             <div className="MenuLinkRollover"></div>
           </Link>
-          <Link className="MenuLink">
+          <Link  to="#" className="MenuLink">
             <div className="MenuLinkTitle">Open Contracting Partnership</div>
             <div className="MenuLinkRollover"></div>
           </Link>
@@ -38,17 +38,17 @@ const Menu = ({ siteTitle }) => (
 )
 
 var show = function (elem) {
-	elem.style.display = 'block';
+	elem.style.left = '0px';
 };
 
 var hide = function (elem) {
-	elem.style.display = 'none';
+	elem.style.left = '-80vw';
 };
 
 var toggle = function (elem) {
 
 	// If the element is visible, hide it
-	if (window.getComputedStyle(elem).display === 'block') {
+	if (window.getComputedStyle(elem).left === '0px') {
 		hide(elem);
 		return;
 	}

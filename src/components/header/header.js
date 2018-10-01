@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => (
   <div>
     <div className="Header"> 
       <div className="BrandContainer">
-      <Link className="Brand">Daniel Pettifer <span className="BrandDetail">UX UI Frontend</span></Link>
+      <Link to="#" className="Brand">Daniel Pettifer <span className="BrandDetail">UX UI Frontend</span></Link>
       </div>
     </div>
   </div>
