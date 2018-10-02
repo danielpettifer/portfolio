@@ -14,7 +14,7 @@ const Menu = ({ siteTitle }) => (
       <div className="MenuGroup">
         <div className="MenuGroupSection">
           <h2 className="MenuTitle DownAndOut ItemOne">UX • UI • Frontend dev</h2>
-          <Link to="#" className="MenuLink DownAndOut ItemTwo">
+          <Link to="/applied/" className="MenuLink DownAndOut ItemTwo">
             <div className="MenuLinkTitle">Applied <span className="MenuLinkDetail">Head of UX</span></div>
             <div className="MenuLinkRollover"></div>
           </Link>
@@ -47,9 +47,12 @@ var show = function (elem) {
   document.getElementById('MenuBarTop').style.backgroundColor = '#000';
   document.getElementById('MenuBarBottom').style.backgroundColor = '#000';
   document.getElementById('MenuBarBottom').style.transform = 'rotate(-45deg)';
-  document.getElementById('MenuBarBottom').style.bottom = '6px';
+  document.getElementById('MenuBarBottom').style.bottom = '4px';
   document.getElementById('MenuCircle').style.transform = 'scale(0,0)';
   document.getElementById('MenuCircle').style.opacity = '0';
+  document.getElementById('Header').style.backgroundColor = '#fff';
+  document.getElementById('example').style.backgroundColor = '#fff';
+
   var x = document.getElementsByClassName("DownAndOut");
   var i;
   for (i = 0; i < x.length; i++) {
@@ -63,12 +66,14 @@ var hide = function (elem) {
   elem.style.left = '-100vw';
   document.getElementById('MenuBarTop').style.transform = 'rotate(0deg)';
   document.getElementById('MenuBarTop').style.top = '0';
-  document.getElementById('MenuBarTop').style.backgroundColor = '#fff';
-  document.getElementById('MenuBarBottom').style.backgroundColor = '#fff';
+  document.getElementById('MenuBarTop').style.backgroundColor = '#000';
+  document.getElementById('MenuBarBottom').style.backgroundColor = '#000';
   document.getElementById('MenuBarBottom').style.transform = 'rotate(0deg)';
   document.getElementById('MenuBarBottom').style.bottom = '0';
   document.getElementById('MenuCircle').style.transform = 'scale(1,1)';
   document.getElementById('MenuCircle').style.opacity = '1';
+  document.getElementById('Header').style.backgroundColor = '#e9eced';
+  document.getElementById('example').style.backgroundColor = '#e9eced';
   var x = document.getElementsByClassName("DownAndOut");
   var i;
   for (i = 0; i < x.length; i++) {

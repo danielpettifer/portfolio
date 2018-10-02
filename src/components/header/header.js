@@ -4,9 +4,9 @@ import styles from './header.css'
 
 const Header = ({ siteTitle }) => (
   <div>
-    <div className="Header"> 
+    <div className="Header" id="Header"> 
       <div className="BrandContainer">
-      <Link to="#" className="Brand">Daniel Pettifer <span className="BrandDetail">UX UI Frontend</span></Link>
+      <Link to="/" className="Brand">Daniel Pettifer <span className="BrandDetail">UX UI Frontend</span></Link>
       </div>
     </div>
   </div>
